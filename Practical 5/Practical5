@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+int factorial(int n)
+{
+    int fact = 1;
+    for (int i = 1; i <= n; i++)
+        fact = fact * i;
+
+    return fact;
+}
+long int factorial(long int n)
+{
+    long int fact = 1;
+    for (long int i = 1; i <= n; i++)
+        fact = fact * i;
+
+    return fact;
+}
+
+int main()
+{
+    int a = 5;
+    long int b = 10;
+
+    cout << "Factorial of int: " << factorial(a) << endl;
+    cout << "Factorial of long int: " << factorial(b) << endl;
+
+    return 0;
+}
