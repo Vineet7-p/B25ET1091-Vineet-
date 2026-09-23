@@ -1,0 +1,32 @@
+#include <iostream>  
+using namespace std;
+
+class complex {      // Defines a new class named 'complex'
+    int real, imag;  // Private member variables to store the real and imaginary parts 
+public:              // Access specifier: everything below this can be accessed from outside the class
+     // Constructor
+    complex(int r, int i) { 
+        real = r;    
+        imag = i;    // Assigns the input value 'i' to the member variable 'imag'
+    }                // Ends the constructor definition
+// Member function to print the complex number to the screen
+void display() { 
+if (imag >= 0) { // Checks if the imaginary part is positive or zero
+// Prints the format: "real + imaginary i" (e.g., 2 + i3)
+ cout << real << " + i" << imag << endl; 
+        }           
+        else {       // Executes if the imaginary part is negative
+            // Creates a temporary variable to turn the negative number into a positive one
+            int positive_imag = -imag; 
+            // Prints the format: "real - imaginary i" (e.g., 4 - i6) instead of 4 + i-6
+            cout << real << " - i" << positive_imag << endl; 
+        }           
+    }                
+};                   
+int main() { 
+  complex c1(2, 3);  
+    cout << "The  complex number is: "; 
+    // Calls the display method on object 'c1' to print its values
+    c1.display(); 
+return 0;       
+}                   
